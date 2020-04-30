@@ -16,16 +16,21 @@ working-storage section.
 01  rcFAILED               PIC S9(9)  value 1.
 01  TIM-CPI                PIC S9(9)  value 31415.
 01  API-HANDLE             USAGE POINTER.
-01  TIM-RET-CODE           PIC S9(9)         value 0.
-01  TIM-X                  PIC S9(8)   binary value 2.
+01  TIM-RET-CODE           PIC S9(9)  binary       value 0.
+01  TIM-X                  PIC S9(9)  binary       value 2.
 01  TIM-DBL                COMP-2  value 0.
 01  TIM-STR                PIC X(8)    value nulls.
- 
+01  TIM-TMP                PIC S9(9)   value zero.
+01 str.
+     03 str-text    pic x(10).
+     03 filler      pic x  value x"00".
+*>- Null terminate string for C function
+
 procedure division.
 
 *>---TEST0------------------------------------------------------------*
  call "TEST0"
-      RETURNING
+      returning
         TIM-RET-CODE
  end-call.
  
@@ -34,12 +39,13 @@ procedure division.
  display 'Expected value=' TIM-CPI end-display
  display ' ' end-display
 
- 
+
 *>---TEST1------------------------------------------------------------*
  move 0 to TIM-RET-CODE.
+ compute TIM-TMP = TIM-CPI * TIM-X end-compute
  
  call "TEST1" using
-      value
+      by value
         TIM-X
       returning
         TIM-RET-CODE
@@ -47,7 +53,7 @@ procedure division.
 
  display '--> TEST1' end-display
  display 'Returned value=' TIM-RET-CODE end-display
- display 'Expected value=' 62830 end-display
+ display 'Expected value=' TIM-TMP end-display
  display ' ' end-display
 
 
@@ -61,13 +67,27 @@ procedure division.
       returning
         TIM-RET-CODE
  end-call.
-
+ 
  display '--> TEST3' end-display
  display 'Returned value=' TIM-RET-CODE end-display
  display 'Expected value=' 5 end-display
  display ' ' end-display
 
+*> filler test
+move 'ABC' to str-text.
+ call "TEST3" using
+      by content
+        str
+      returning
+        TIM-RET-CODE
+ end-call.
  
+ display '--> TEST3 using filler trick for null terminating strings' end-display
+ display 'Returned value=' TIM-RET-CODE end-display
+ display 'Expected value=' 10 end-display
+ display ' ' end-display
+
+
 *>---TEST4------------------------------------------------------------*
  move 0 to TIM-RET-CODE.
  move 123.45 to TIM-DBL.
@@ -195,7 +215,7 @@ move null to API-HANDLE.
  display 'Expected value=' rcOK end-display
  display ' ' end-display
 
- 
+
 *>---------------------------------------------------------------*
  stop run.
 

@@ -3,7 +3,9 @@ Example that creates a:
 shared library (timtest)
 executeable (timapp) that call the entry-point of timlib
 
-List of entry-points of timtest
+List of entry-points of 'timtest' and defined in the file
+'timtest.h'.
+
 TEST0
 TEST1
 TEST2
