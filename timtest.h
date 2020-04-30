@@ -81,7 +81,7 @@ int TK_FUNCTION TESTH1(
 );
 
 // Pass by reference test 
-// returns always 0
+// returns always rcok
 // in_Handle is set to a valid memory address
 int TK_FUNCTION TESTH2(
     TBHANDLE * in_Handle
