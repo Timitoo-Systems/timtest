@@ -27,3 +27,50 @@ called from a cobol application.
 The project 'timtest' is set as start application and
 the cobol application as the executable 
 (configuration is debug).
+
+--
+The expected output of the Cobol application
+.\timtest\buildwin64\x64\Debug>tst_cob1.exe
+
+--> TEST0
+Returned value=+000031415
+Expected value=+000031415
+
+--> TEST1
+Returned value=+000062830
+Expected value=62830
+
+--> TEST3
+Returned value=+000000005
+Expected value=5
+
+--> TEST4
+Returned value=+000012345
+Expected value=12345
+
+Returned value=+000000314
+Expected value=314
+
+--> TESTH1
+Returned value=+000000000
+Expected value=+000000000
+
+Returned value=+000000001
+Expected value=+000000001
+
+--> TESTH2
+API-HANDLE=0x000007fef4d3a000
+Returned value=+000000000
+Expected value=+000000000
+
+--> TESTH3
+Returned value=+000000000
+Expected value=+000000000
+
+--> TESTF1
+Returned value=+000000000
+Expected value=+000000000
+
+--> TESTF2
+Returned value=+000000000
+Expected value=+000000000
