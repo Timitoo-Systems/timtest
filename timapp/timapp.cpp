@@ -98,3 +98,13 @@ TEST_CASE("TESTF2 create file and write string", "[timlib]") {
     char helloText[] = { "Hello World!"};
     REQUIRE( TESTF2(helloText) == rcOK );
 }
+
+TEST_CASE("TEST AFPBgnSession", "[timlib]") {
+
+    TBHANDLE sessionHandle = nullptr;
+    int rc = AFPBgnSession(&sessionHandle);
+
+    REQUIRE(sessionHandle != nullptr);
+    REQUIRE(rc == rcOK);
+
+}
