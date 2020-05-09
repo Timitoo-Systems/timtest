@@ -10,7 +10,7 @@ https://sourceforge.net/p/open-cobol/discussion/cobol/thread/f6130534/
 
 Path to cobol copy books can be set with -I option
 
-E:\Qt\cobol\GnuCobolCPP>bin\cobc.exe 
+.\cobc.exe 
   -o E:\github.com\timtest\buildwin64\x64\RelWithDebInfo\tst_cob1.exe
   -free
   -I include
