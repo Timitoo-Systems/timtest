@@ -14,10 +14,10 @@ A 64 bit DLL is always defined with __cdecl and not __stdcall. The Microsoft art
 [Microsoft stdcall](/https://docs.microsoft.com/en-us/cpp/cpp/stdcall?view=vs-2019)
 
 #### CMAKE
-cd <project dir>
-mkdir build
-cd build
-cmake -G  "Visual Studio 14 2015 Win64" ..
+ cd project_dir<br>
+ mkdir build<br>
+ cd build<br>
+ cmake -G  "Visual Studio 14 2015 Win64" ..<br>
 [cmake generator names](https://cmake.org/cmake/help/latest/manual/cmake-generators.7.html)
 
 #### Microfocus
