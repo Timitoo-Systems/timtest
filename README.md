@@ -11,7 +11,7 @@ It includes catch.hpp for unit test call.
 
 A 64 bit DLL is always defined with __cdecl and not __stdcall. The Microsoft article below shows that information that a __stdcall is accepted, but is ignored when it is 64 bit.
 
-[Microsoft stdcall](/https://docs.microsoft.com/en-us/cpp/cpp/stdcall?view=vs-2019)
+[Microsoft stdcall](https://docs.microsoft.com/en-us/cpp/cpp/stdcall?view=vs-2019)
 
 #### CMAKE
  `cd project_dir`<br>
