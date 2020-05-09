@@ -9,7 +9,8 @@ It includes catch.hpp for unit test call.
 
 ### Link Collection
 
-A 64 bit DLL is always defined with __cdecl and not __stdcall. The Microsoft article below shows that information that a __stdcall is accepted, but is ignored when it is 64 bit.
+A 64 bit DLL is always defined with __cdecl and not __stdcall. The Microsoft article below shows that information that a __stdcall is accepted, but ignored by the compiler on x64. (The __stdcall calling convention is used to call Win32 API functions
+only!)
 
 [Microsoft stdcall](https://docs.microsoft.com/en-us/cpp/cpp/stdcall?view=vs-2019)
 
