@@ -80,7 +80,7 @@ PRIVATE
 ##
 ## compile definitions
 ##
-target_compile_definitions(${TIM_TEST}
+target_compile_definitions(${TIM_APP}
  PRIVATE 
   "$<$<PLATFORM_ID:Windows>:_SBCS>"
   "$<$<PLATFORM_ID:Windows>:WIN32>"
