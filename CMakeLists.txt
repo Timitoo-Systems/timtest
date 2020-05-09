@@ -90,7 +90,7 @@ target_compile_definitions(${TIM_TEST}
 ##
 ## Position independent code in Linux
 ##
-target_compile_options( ${TIM_TEST}
+target_compile_options( ${TIM_APP}
   PRIVATE 
   "$<$<PLATFORM_ID:Linux>:-fPIC>"
   "$<$<PLATFORM_ID:Linux>:-std=c++11>"
