@@ -6,7 +6,7 @@ Simple DLL with __cdecl Calling Conventions.
 An executable that is dynamically linked with 'timtest'
 It includes catch.hpp for unit test call.
 
-### CMAKE commands to create VS Studio Project files
+### CMake commands to create VS Studio Project files
  `cd project_dir`<br>
  `mkdir build`<br>
  `cd build`<br>
@@ -15,7 +15,7 @@ It includes catch.hpp for unit test call.
 
 ### Link Collection
 
-### Microsoft
+#### Microsoft
 A 64 bit DLL is always defined with __cdecl and not __stdcall. The Microsoft article below shows that information that a __stdcall is accepted, but ignored by the compiler on x64. (The __stdcall calling convention is used to call Win32 API functions
 only!)
 
