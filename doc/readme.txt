@@ -21,8 +21,8 @@ In folder timcob:
 tst_timcob.cob
 Cobol example program that calls the entry-points of timtest.
 
-The image 
-msstudio.png 
+The screenshot 
+'msstudio.png'
 shows how to set a excutable (e.g. cobol)
 to that can be used to debug the shared libary when 
 called from a cobol application.
@@ -30,10 +30,10 @@ The project 'timtest' is set as start application and
 the cobol application as the executable 
 (configuration is debug).
 
-The image:
-dbg_rel_studio.png
-shows the default CMake Configurations for VS Studio 
-Projects. The config 'RelWithDgbINfo' creates a
+The screenshot:
+'dbg_rel_studio.png'
+shows the default CMake configurations for VS Studio 
+Projects. The config 'RelWithDgbInfo' creates a
 release version with debug symbols (*.pdb files).
 
 --
