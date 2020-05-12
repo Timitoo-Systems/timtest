@@ -1,7 +1,7 @@
 
 Example that creates a:
 shared library (timtest)
-executeable (timapp) that call the entry-point of timlib
+and a executable (timapp) that calls the entry-point of timlib
 
 List of entry-points of 'timtest' and defined in the file
 'timtest.h'.
@@ -19,7 +19,7 @@ TESTH3
 
 In folder timcob:
 tst_timcob.cob
-cobol example program that calls the entry-points of timtest.
+Cobol example program that calls the entry-points of timtest.
 
 The image 
 msstudio.png 
@@ -29,6 +29,12 @@ called from a cobol application.
 The project 'timtest' is set as start application and
 the cobol application as the executable 
 (configuration is debug).
+
+The image:
+dbg_rel_studio.png
+shows the default CMake Configurations for VS Studio 
+Projects. The config 'RelWithDgbINfo' creates a
+release version with debug symbols (*.pdb files).
 
 --
 The expected output of the Cobol application

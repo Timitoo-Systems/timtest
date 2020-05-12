@@ -30,3 +30,5 @@ only!)
 [Microfocus - Mixed Language Programming](https://www.microfocus.com/documentation/visual-cobol/VC40/EclWin/GUID-A39ABE98-B22F-4115-BB6C-0CE9A9444A12.html)
 
 [Microfocus - Call Conventions for Interfacing with Mixed Languages](https://www.microfocus.com/documentation/visual-cobol/vc50pu3/DevHub/HHMXCHMIXL19.html)
+
+[Microfocus - CALL Statement](https://www.microfocus.com/documentation/visual-cobol/vc40pu2/DevHub/HRLHLHPDF804.html)
