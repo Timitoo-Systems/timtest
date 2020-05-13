@@ -38,8 +38,9 @@ only!)
 
 [GnuCobol Dokumentation](https://devdocs.io/gnu_cobol/)
 
-#### Some Pointer fun
-`    // incorrect version - sets only the first 4 bytes (works on 32 systems only)
+#### Some Handle fun
+    `    
+    // incorrect version - sets only the first 4 bytes (works on 32 systems only)
     (*outp_sessHandle) = nullptr;
     *(int*)outp_sessHandle = 0x55CC55CC55CC55CC;
     printf("%p\n", *outp_sessHandle);
