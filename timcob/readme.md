@@ -4,17 +4,15 @@ COBOL and 'C' 64bit, mixed language application interface example.
 The 'C' program must be compiled first to provide an import library
 needed to complete the COBOL program.
 
-#### Resolve 'Call' statements at link time
-By default Cobol compiler will not resolve calls to native code 
-at link time.
-
-The MF documentation for passing parameters, and other details of the interface between the two programs.
+#### How to resolve 'Call' statements at link time
+By default Cobol compiler will not resolve calls to native code at link time. The MF documentation for passing parameters, and other details of the interface between the two programs.
 can be found here:
 
 [Call Conventions for Interfacing with Mixed Languages](https://www.microfocus.com/documentation/visual-cobol/vc50pu3/DevHub/HHMXCHMIXL19.html)
 
-Bit 3
-   1  Call is resolved at link time
+  * Bit 3
+    0 Normal linking behavior 
+    1  Call is resolved at link time
 
 In the special-names section the call convention needs to be added:
 special-names.
