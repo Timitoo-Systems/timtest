@@ -39,7 +39,7 @@ only!)
 [GnuCobol Dokumentation](https://devdocs.io/gnu_cobol/)
 
 #### Some Handle fun
-    `    
+```cpp    
     // incorrect version - sets only the first 4 bytes (works on 32 systems only)
     (*outp_sessHandle) = nullptr;
     *(int*)outp_sessHandle = 0x55CC55CC55CC55CC;
@@ -70,4 +70,4 @@ only!)
     TBHANDLE handle = (TBHANDLE)0x55CC55CC55CC55CC;
     std::memcpy(outp_sessHandle, (TBHANDLE)&handle,sizeof(TBHANDLE));
     printf("%p\n", *outp_sessHandle);
-    `
+```
