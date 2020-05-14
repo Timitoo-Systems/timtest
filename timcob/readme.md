@@ -11,8 +11,8 @@ can be found here:
 [Call Conventions for Interfacing with Mixed Languages](https://www.microfocus.com/documentation/visual-cobol/vc50pu3/DevHub/HHMXCHMIXL19.html)
 
   * Bit 3
-    0 Normal linking behavior 
-    1  Call is resolved at link time
+    - 0 Normal linking behavior 
+    - 1  Call is resolved at link time
 
 In the special-names section the call convention needs to be added:
 special-names.
