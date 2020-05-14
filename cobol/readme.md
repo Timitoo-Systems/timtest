@@ -36,11 +36,11 @@ On Windows an import library must be used to resolve calls at link time
   cbllink -v -k -l -d -o tst_mfcob.dll tst_mfcob.cbl timtest.lib
 ```
 
+(For brevity the path information has been omitted.)
+
 Here you can find a screenshot showing the dependency of the compiled application (GNUCobol version).
 
-[dependency](https://github.com/Timitoo-Systems/timtest/tree/master/doc/dependencywalker_tst_cob1.png)
-
-(For brevity the path information has been omitted.)
+[dependencywalker_tst_cob1.png](https://github.com/Timitoo-Systems/timtest/tree/master/doc/dependencywalker_tst_cob1.png)
 
 ### GnuCobol COMPILE STATEMENT
 
