@@ -1,15 +1,30 @@
+       >>SOURCE FORMAT IS FREE
+
 identification division.
 program-id. timapp.
 
 *>---------------------------------------------------------------*
 *> Timitoo Systems test for Cobol Calls                          *
 *> Tested with GNUCOBOL 2.2 (64bit)                              *
+*>                                                               *
 *>---------------------------------------------------------------*
 
+environment division.
+
+configuration section.
+
+*>---------------------------------------------------------------*
+*> For MICROFOCUS                                                *
+*> Call Conventions for Interfacing with Mixed Languages:        *
+*> special-names.                                                *
+*>      call-convention 8 is static.                             *
+*>---------------------------------------------------------------*
+special-names.
+       
 data division.
 
 file section.
-
+      
 working-storage section.
 
 01  rcOK                   PIC S9(9)  value 0.
@@ -29,7 +44,7 @@ working-storage section.
 procedure division.
 
 *>---TEST0------------------------------------------------------------*
- call "TEST0"
+ call static "TEST0"
       returning
         TIM-RET-CODE
  end-call.
@@ -44,7 +59,7 @@ procedure division.
  move 0 to TIM-RET-CODE.
  compute TIM-TMP = TIM-CPI * TIM-X end-compute
  
- call "TEST1" using
+ call static "TEST1" using
       by value
         TIM-X
       returning
@@ -61,7 +76,7 @@ procedure division.
  move 0 to TIM-RET-CODE.
  move z'lorem' to TIM-STR.
  
- call "TEST3" using
+ call static "TEST3" using
       by content
         TIM-STR
       returning
@@ -75,7 +90,7 @@ procedure division.
 
 *> filler test
 move 'ABC' to str-text.
- call "TEST3" using
+ call static "TEST3" using
       by content
         str
       returning
@@ -92,7 +107,7 @@ move 'ABC' to str-text.
  move 0 to TIM-RET-CODE.
  move 123.45 to TIM-DBL.
  
- call "TEST4" using
+ call static "TEST4" using
       value
         TIM-DBL
       returning
@@ -105,7 +120,7 @@ move 'ABC' to str-text.
  display ' ' end-display
 
  move 3.1415 to TIM-DBL.
- call "TEST4" using
+ call static "TEST4" using
       value
         TIM-DBL
       returning
@@ -120,7 +135,7 @@ move 'ABC' to str-text.
 *>---TESTH1------------------------------------------------------------*
 move null to API-HANDLE.
 
- call "TESTH1" using
+ call static "TESTH1" using
       by value
         API-HANDLE
       returning
@@ -134,7 +149,7 @@ move null to API-HANDLE.
  
 set API-HANDLE up by 5.
 
- call "TESTH1" using
+ call static "TESTH1" using
       by value
         API-HANDLE
       returning
@@ -150,7 +165,7 @@ set API-HANDLE up by 5.
 *>---TESTH2------------------------------------------------------------*
 move null to API-HANDLE.
 
- call "TESTH2" using
+ call static "TESTH2" using
       by reference
         API-HANDLE
       returning
@@ -168,14 +183,14 @@ move null to API-HANDLE.
 move null to API-HANDLE.
 
 *> get handle
- call "TESTH2" using
+ call static "TESTH2" using
       by reference
         API-HANDLE
       returning
         TIM-RET-CODE
  end-call.
 
- call "TESTH3" using
+ call static "TESTH3" using
      by value
        API-HANDLE
      returning
@@ -190,7 +205,7 @@ move null to API-HANDLE.
 
 *>---TESTF1------------------------------------------------------------*
 
- call "TESTF1"
+ call static "TESTF1"
       returning
         TIM-RET-CODE
  end-call.
@@ -200,10 +215,10 @@ move null to API-HANDLE.
  display 'Expected value=' rcOK end-display
  display ' ' end-display
 
-*>---TESTF1------------------------------------------------------------*
+*>---TESTF2------------------------------------------------------------*
 
  move z'lorem' to TIM-STR.
- call "TESTF2" using
+ call static "TESTF2" using
       by content
         TIM-STR
       returning
