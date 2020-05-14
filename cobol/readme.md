@@ -5,8 +5,7 @@ The 'C' program must be compiled first to provide an import library
 needed to complete the COBOL program.
 
 #### How to resolve 'Call' statements at link time
-By default Cobol compiler will not resolve calls to native code at link time. The MF documentation for passing parameters, and other details of the interface between the two programs.
-can be found here:
+By default CALL is dynamic. The special name call-convention can be used to tweak the linker tool chain to include object code. The MF documentation for passing parameters, and other details of the interface between two programs can be found here:
 
 [Call Conventions for Interfacing with Mixed Languages](https://www.microfocus.com/documentation/visual-cobol/vc50pu3/DevHub/HHMXCHMIXL19.html)
 

@@ -16,7 +16,7 @@ It includes catch.hpp for unit test call.
 ### Link Collection
 
 #### Microsoft
-A 64 bit DLL is always defined with __cdecl and not __stdcall. The Microsoft article below shows that information that a __stdcall is accepted, but ignored by the compiler on x64. (The __stdcall calling convention is used to call Win32 API functions
+A 64 bit DLL is always defined with __cdecl and not __stdcall. The Microsoft article below shows that __stdcall is accepted, but ignored by the compiler on x64. (The __stdcall calling convention is used to call Win32 API functions
 only!)
 
 [Microsoft stdcall](https://docs.microsoft.com/en-us/cpp/cpp/stdcall?view=vs-2019)
@@ -38,7 +38,11 @@ only!)
 
 [GnuCobol Dokumentation](https://devdocs.io/gnu_cobol/)
 
-#### Some Handle fun
+#### Mickael Andrieu - awesome-cobol
+
+[awesome-cobol](https://github.com/mickaelandrieu/awesome-cobol)
+
+#### Some C++ handle fun
 ```cpp
     // TBHANDLE (which is a typedef of a void *) version 
     (*outp_sessHandle) = nullptr;
