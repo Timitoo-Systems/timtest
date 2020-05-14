@@ -38,10 +38,6 @@ only!)
 
 [GnuCobol Dokumentation](https://devdocs.io/gnu_cobol/)
 
-#### Mickael Andrieu - awesome-cobol
-
-[awesome-cobol](https://github.com/mickaelandrieu/awesome-cobol)
-
 #### Some C++ handle fun
 ```cpp
     // TBHANDLE (which is a typedef of a void *) version 
