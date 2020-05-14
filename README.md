@@ -39,35 +39,35 @@ only!)
 [GnuCobol Dokumentation](https://devdocs.io/gnu_cobol/)
 
 #### Some Handle fun
-```cpp    
-    // incorrect version - sets only the first 4 bytes (works on 32 systems only)
+```cpp
+    // TBHANDLE (which is a typedef of a void *) version 
     (*outp_sessHandle) = nullptr;
-    *(int*)outp_sessHandle = 0x55CC55CC55CC55CC;
+    (*outp_sessHandle) = (TBHANDLE)0xDEADBEEFDEADBEEF;
+    printf("%p\n", *outp_sessHandle);
+
+    // bad style - sets only the first 4 bytes (works on 32 bit systems only)
+    (*outp_sessHandle) = nullptr;
+    *(int*)outp_sessHandle = 0xDEADBEEFDEADBEEF;
     printf("%p\n", *outp_sessHandle);
 
     // char * version
     (*outp_sessHandle) = nullptr;
-    *(char**)(outp_sessHandle) = reinterpret_cast<char *>(0x55CC55CC55CC55CC);
+    *(char**)(outp_sessHandle) = reinterpret_cast<char *>(0xDEADBEEFDEADBEEF);
     printf("%p\n", *outp_sessHandle);
 
     // uint64_t* version
     (*outp_sessHandle) = nullptr;
-    *(uint64_t*)outp_sessHandle = 0x55CC55CC55CC55CC;
+    *(uint64_t*)outp_sessHandle = 0xDEADBEEFDEADBEEF;
     printf("%p\n", *outp_sessHandle);
 
     // void* version
     (*outp_sessHandle) = nullptr;
-    (*outp_sessHandle) = reinterpret_cast<void *>(0x55CC55CC55CC55CC);
-    printf("%p\n", *outp_sessHandle);
-
-    // TBHANDLE (which is a typedef of a void *) version 
-    (*outp_sessHandle) = nullptr;
-    (*outp_sessHandle) = (TBHANDLE)0x55CC55CC55CC55CC;
+    (*outp_sessHandle) = reinterpret_cast<void *>(0xDEADBEEFDEADBEEF);
     printf("%p\n", *outp_sessHandle);
 
     // memcpy version
     (*outp_sessHandle) = nullptr;
-    TBHANDLE handle = (TBHANDLE)0x55CC55CC55CC55CC;
-    std::memcpy(outp_sessHandle, (TBHANDLE)&handle,sizeof(TBHANDLE));
+    TBHANDLE handle = (TBHANDLE)0xDEADBEEFDEADBEEF;
+    std::memcpy(outp_sessHandle, &handle, sizeof(TBHANDLE));
     printf("%p\n", *outp_sessHandle);
 ```
