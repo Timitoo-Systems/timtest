@@ -15,20 +15,27 @@ can be found here:
     - 1  Call is resolved at link time
 
 In the special-names section a call convention needs to be added:
+```
 special-names.
   call-convention 8 is static.
+```
 
 Now the special name 'static' can be used for calls with are implemented in a shared object.
 Example:
+```
     call static "AFPBgnSession" ....
+```
 
 With the call-convention 8 the cbllink command must not be able to resolve
 the calls without an import library. The statement below must generate 
 unresolved 'call' errors.
+```
     cbllink -v -k -l -d -o tst_mfcob.dll tst_mfcob.cob
- 
+```
 On Windows an import library must be used resolve calls at link time
+```
     cbllink -v -k -l -d -o tst_mfcob.dll tst_mfcob.cob timtest.lib
+```
 
 (For brevity the path information has been omitted.)
 
