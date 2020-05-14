@@ -43,11 +43,11 @@ On Windows an import library must be used resolve calls at link time
 
 Using precompiled binaries from:
 
-[](http://www.kiska.net/opencobol/cpp/index.html)
-[](http://www.kiska.net/opencobol/cpp/gnucobolcpp-2.2-win-vb-amd64-bin.zip)
+[www.kiska.net/opencobol/cpp/index.html](http://www.kiska.net/opencobol/cpp/index.html)
+[gnucobolcpp](http://www.kiska.net/opencobol/cpp/gnucobolcpp-2.2-win-vb-amd64-bin.zip)
 
- What is the record/byte size of the following PIC statement
-https://sourceforge.net/p/open-cobol/discussion/cobol/thread/f6130534/
+What is the record/byte size of the following PIC statement:
+[discussion/cobol](https://sourceforge.net/p/open-cobol/discussion/cobol/thread/f6130534/)
 
 Path to cobol copy books can be set with -I option
 ```
