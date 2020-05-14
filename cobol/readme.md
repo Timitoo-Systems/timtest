@@ -5,7 +5,7 @@ The 'C' program must be compiled first to provide an import library
 needed to complete the COBOL program.
 
 #### How to resolve 'Call' statements at link time
-By default CALL used 'dynamic loading'. The special name call-convention can be used to tweak the linker tool chain to include object code. The MF documentation for passing parameters, and other details of the interface between two programs can be found here:
+By default CALL uses 'dynamic loading'. The special name call-convention can be used to tweak the linker tool chain to include object code. The MF documentation for passing parameters, and other details of the interface between two programs can be found here:
 
 [Call Conventions for Interfacing with Mixed Languages](https://www.microfocus.com/documentation/visual-cobol/vc50pu3/DevHub/HHMXCHMIXL19.html)
 
@@ -19,21 +19,21 @@ special-names.
   call-convention 8 is static.
 ```
 
-Now the special name 'static' can be used for calls with are implemented in a shared object.
+Now the special name 'static' can be used for calls which are implemented in a shared object.
 Example:
 ```
-    call static "AFPBgnSession" ....
+  call static "AFPBgnSession" ....
 ```
 
 With the call-convention 8 the cbllink command must not be able to resolve
 the calls without an import library. The statement below must generate 
 unresolved 'call' errors.
 ```
-    cbllink -v -k -l -d -o tst_mfcob.dll tst_mfcob.cob
+  cbllink -v -k -l -d -o tst_mfcob.dll tst_mfcob.cbl
 ```
-On Windows an import library must be used resolve calls at link time
+On Windows an import library must be used to resolve calls at link time
 ```
-    cbllink -v -k -l -d -o tst_mfcob.dll tst_mfcob.cob timtest.lib
+  cbllink -v -k -l -d -o tst_mfcob.dll tst_mfcob.cbl timtest.lib
 ```
 
 (For brevity the path information has been omitted.)
@@ -62,5 +62,5 @@ Path to cobol copy books can be set with -I option
   -x
   -W
   -conf "E:\Qt\cobol\GnuCobolCPP\config\default.conf"
-   E:\github.com\timtest\timcob\tst_timcob.cob
+   E:\github.com\timtest\cobol\tst_timcob.cbl
 ```
