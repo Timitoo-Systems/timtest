@@ -37,6 +37,7 @@ On Windows an import library must be used to resolve calls at link time
 ```
 
 Here you can find a screenshot showing the dependency of the compiled application (GNUCobol version).
+
 [dependency](https://github.com/Timitoo-Systems/timtest/tree/master/doc/dependencywalker_tst_cob1.png)
 
 (For brevity the path information has been omitted.)
