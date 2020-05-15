@@ -31,7 +31,7 @@ unresolved 'call' errors.
 ```
   cbllink -v -k -l -d -o tst_mfcob.dll tst_mfcob.cbl
 ```
-On Windows an import library must be used to resolve calls at link time
+On Windows an import library must be used to resolve calls at link time.
 ```
   cbllink -v -k -l -d -o tst_mfcob.dll tst_mfcob.cbl timtest.lib
 ```
@@ -41,6 +41,12 @@ On Windows an import library must be used to resolve calls at link time
 Here you can find a screenshot showing the dependency of the compiled application (GNUCobol version).
 
 [dependencywalker_tst_cob1.png](https://github.com/Timitoo-Systems/timtest/tree/master/doc/dependencywalker_tst_cob1.png)
+
+Depending on the CASE generator directive also Bit 9 might be relevant.
+
+  * Bit 9
+    - 0  The case of the program or call name is disregarded  
+    - 1  The case of the program or call name is significant
 
 ### GnuCobol COMPILE STATEMENT
 
