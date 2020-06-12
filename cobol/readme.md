@@ -58,9 +58,16 @@ Using precompiled binaries from:
 What is the record/byte size of the following PIC statement:
 [discussion/cobol](https://sourceforge.net/p/open-cobol/discussion/cobol/thread/f6130534/)
 
+For 64 bit use vcvars64.bat
+
+```
+cd GnuCobol
+bin\cobc.exe
+```
+
 Path to cobol copy books can be set with -I option
 ```
-.\cobc.exe 
+bin\cobc.exe 
   -o E:\github.com\timtest\buildwin64\x64\RelWithDebInfo\tst_cob1.exe
   -free
   -I include
