@@ -81,3 +81,14 @@ bin\cobc.exe
   -conf "E:\Qt\cobol\GnuCobolCPP\config\default.conf"
    E:\github.com\timtest\cobol\tst_timcob.cbl
 ```
+
+With debug support:
+ -g                 enable C compiler debug / stack check / trace
+ -d, -debug         enable all run-time error checking
+  -ftraceall        generate trace code 
+                    executed SECTION/PARAGRAPH/STATEMENTS
+                    turned on by -debug 
+ 
+```
+cobc -x -g -debug -ftraceall
+```
