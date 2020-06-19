@@ -93,5 +93,5 @@ With debug support:<br>
 cobc -x -g -debug -ftraceall
 ```
 
-[GNUCobol](https://devdocs.io/gnu_cobol/index#CALL)<br>
+[GNUCobol CALL](https://devdocs.io/gnu_cobol/index#CALL)<br>
 
