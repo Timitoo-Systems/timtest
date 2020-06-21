@@ -42,7 +42,3 @@ target_compile_options( ${TIM_TEST}
   "$<$<PLATFORM_ID:Windows>:/W3>"
 )
 
-add_custom_command(
-   TARGET ${TIM_TEST}
-   COMMAND ${CMAKE_COMMAND} -E md5sum "$<TARGET_FILE:${TIM_TEST}>" > ${TIM_TEST}_$<CONFIG>.md5
-)
